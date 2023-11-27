@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link active" href="./index.html">Inicio</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <!-- Button trigger modal -->
+        <button id="crear" type="button" class="btn btn-primary m-3 ms-0" data-bs-toggle="modal"
+            data-bs-target="#cuervosCrud">
+            Crear
+        </button>
+        <table class="table">
+            <thead>
+                <tr>
+                <tr class="table-dark">
+                    <th scope="col">id proyecto</th>
+                    <th scope="col">nombre proyecto</th>
+                    <th scope="col">numero estructura</th>
+                    <th scope="col">tipo de construccion</th>
+                    <th scope="col">ocupacion</th>
+                    <th scope="col">comuna</th>
+                    <th scope="col">posibilidad de subsidiar </th>
+                    <th scope="col">numero de pisos</th>
+                    <th scope="col">numero de habitaciones</th>
+                    <th scope="col">numero de baños</th>
+                    <th scope="col">estacionamiento</th>
+                    <th scope="col">precio total</th>
+                    <th scope="col">rut de empresa</th>
+                    <th scope="col">nombre de empresa</th>
+                    <th scope="col">email de empresa</th>
+                    <th scope="col">telefono contacto</th>
+                    <th scope="col">rut cliente</th>
+                    <th scope="col">nombre cliente</th>
+                    <th scope="col">apellido cliente</th>
+                    <th scope="col">sexo</th>
+                    <th scope="col">telefono cliente</th>
+                    <th scope="col">email cliente</th>
+                    <th scope="col">fecha de pago de estructura</th>
+                    <th scope="col">monto pagado</th>
+                    <th scope="col">comprobante</th>
+                    <th scope="col">credito hipotecario</th>
+                    <th scope="col">fecha de solicitado</th>
+                    <th scope="col">monto solicitado</th>
+                    <th scope="col">años a pagar</th>
+                    <th scope="col">dividendo mensual</th>
+                    <th scope="col">interes</th>
+                    <th scope="col">entidad bancaria</th>
+                    <th scope="col">nombre notaria</th>
+                    <th scope="col">nombre del notario</th>
+                    <th scope="col">apellido del notario</th>
+                    <th scope="col">rut del notario</th>
+                    <th scope="col">gastos operacionales</th>
+                    <th scope="col">firma del cliente</th>
+                    <th scope="col">firma de inmobiliaria</th>
+                    <th scope="col">firma del notario</th>
+
+
+                </tr>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="cuervosCrud" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">id proyecto</label>
+                            <input type="text" class="form-control" id="id_proyecto" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">id proyecto</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">nombre proyecto</label>
+                            <input type="text" class="form-control" id="nombre_proyecto">
+                        </div>
+                              <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">numero estructura</label>
+                            <input type="text" class="form-control" id="numero_estructura">
+                        </div>
+                                                     <!-- <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">tipo de construccion</label>
+                            <input type="text" class="form-control" id="tipo_de_construccion">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">ocupacion</label>
+                            <input type="text" class="form-control" id="ocupacion">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">comuna</label>
+                            <input type="text" class="form-control" id="comuna">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">posibilidad de subsidiar</label>
+                            <input type="text" class="form-control" id="posibilidad_de_subsidiar">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">numero de pisos</label>
+                            <input type="text" class="form-control" id="numero_pisos">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">numero de habitaciones</label>
+                            <input type="text" class="form-control" id="numero_de_habitaciones">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">numero de baños</label>
+                            <input type="text" class="form-control" id="numero_baños">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">estacionamiento</label>
+                            <input type="text" class="form-control" id="estacionamiento">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Precio total</label>
+                            <input type="text" class="form-control" id="preciototal">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">rut de empresa</label>
+                            <input type="text" class="form-control" id="rut_empresa">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">nombre de empresa</label>
+                            <input type="text" class="form-control" id="nombre_de_empresa">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">email de empresa</label>
+                            <input type="text" class="form-control" id="email_de_empresa">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">telefono de contacto</label>
+                            <input type="text" class="form-control" id="telefono_contacto">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">rut cliente </label>
+                            <input type="text" class="form-control" id="rut_cliente">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">nombre cliente</label>
+                            <input type="text" class="form-control" id="nombre_cliente">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">apellido cliente</label>
+                            <input type="text" class="form-control" id="apellido_cliente">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">sexo</label>
+                            <input type="text" class="form-control" id="sexo">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">telefono cliente</label>
+                            <input type="text" class="form-control" id="telefono_cliente">
+                        </div>
+                                                      <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">email cliente</label>
+                            <input type="text" class="form-control" id="email_cliente">
+                        </div>
+                                <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">fecha de pago de estructura</label>
+                            <input type="text" class="form-control" id="fecha_de_pago_estructura">
+                        </div>
+                             <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">monto pagado</label>
+                            <input type="text" class="form-control" id="monto_pagado">
+                        </div>
+                            <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">comprobante</label>
+                            <input type="text" class="form-control" id="comprobante">
+                        </div>
+                             <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">credito hipotecario</label>
+                            <input type="text" class="form-control" id="credito_hipotecario">
+                        </div>
+                             <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">fecha solicitud credito</label>
+                            <input type="text" class="form-control" id="fecha_solicitado_credito_hipotecario">
+                        </div>
+                             <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">monto solicitado credito</label>
+                            <input type="text" class="form-control" id="monto_solicitado_credito_hipotecario">
+                        </div>
+                            <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">años a pagar</label>
+                            <input type="text" class="form-control" id="años_a_pagar">
+                        </div>
+                            <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">dividendo mensual</label>
+                            <input type="text" class="form-control" id="dividendo_mensual">
+                        </div>
+                           <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">interes credito</label>
+                            <input type="text" class="form-control" id="interes_credito_hipotecario">
+                        </div>
+                             <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Banco</label>
+                            <input type="text" class="form-control" id="entidad_bancaria">
+                        </div>
+                            <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">nombre notaria</label>
+                            <input type="text" class="form-control" id="nombre_notaria">
+                        </div>
+                             <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">nombre del notario</label>
+                            <input type="text" class="form-control" id="nombre_del_notario">
+                        </div>
+                             <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">apellido del notario</label>
+                            <input type="text" class="form-control" id="apellido_del_notario">
+                        </div>
+                                <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">rut del notario </label>
+                            <input type="text" class="form-control" id="rut_del_notario">
+                        </div>
+                             <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">gastos operacionales</label>
+                            <input type="text" class="form-control" id="gastos_operacionales">
+                        </div>
+                            <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">firma cliente </label>
+                            <input type="text" class="form-control" id="firma_del_cliente">
+                        </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">firma inmobiliaria</label>
+                            <input type="text" class="form-control" id="firma_inmobiliaria">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">firma notario</label>
+                            <input type="text" class="form-control" id="firma_notario">
+                        </div>-->
+
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
